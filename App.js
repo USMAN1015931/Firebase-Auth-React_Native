@@ -13,12 +13,15 @@ export default function App() {
   return (
   
     <NavigationContainer>
-    <Stack.Navigator screenOptions={{ headerShown: true }}>
-      
+    <Stack.Navigator screenOptions={{ headerShown: true  }}>
+
+ 
     <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="AdminHome" component={AdminHome} />
-      <Stack.Screen name="UserHome" component={UserHome} />
+      <Stack.Screen name="Home" component={UserHome} /> 
+     
+      
      
     
     </Stack.Navigator>

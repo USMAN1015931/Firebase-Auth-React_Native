@@ -39,8 +39,16 @@ export default function Login({ navigation }) {
      // Signed in
      console.log("user data,", userCredential.user);
      const user = userCredential.user;
+     if(email.includes('@admin'))
+     {
+       navigation.navigate('AdminHome', {value: email});
+     }
+     else
+     {
+     navigation.navigate('Home');
 
-     navigation.navigate('UserHome');
+     }
+
      })
    .catch((error) => {
      const errorCode = error.code;
@@ -89,15 +97,15 @@ export default function Login({ navigation }) {
           </View>
         </TouchableOpacity>
 
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
+        {/* <View style={{ flexDirection: "row", alignItems: "center" }}>
           <View style={styles.line} />
           <View>
             <Text style={styles.lineText}>Or Login With</Text>
           </View>
           <View style={styles.line} />
-        </View>
+        </View> */}
 
-        <View style = {styles.bottomButtonsView}>
+        {/* <View style = {styles.bottomButtonsView}>
         <TouchableOpacity style = {styles.bottomButtons}>
         <Image
         source={require('./facebook.png')} 
@@ -109,9 +117,9 @@ export default function Login({ navigation }) {
         source={require('./google.png')} 
         style={styles.image}
       />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
 
-      </View>
+      {/* </View> */}
       </View>
 
     
@@ -124,7 +132,7 @@ export default function Login({ navigation }) {
 
         </View>
 
-      <StatusBar style="backgroundColor" />
+      <StatusBar style="auto" />
     </LinearGradient>
     </KeyboardAvoidingView>
   );

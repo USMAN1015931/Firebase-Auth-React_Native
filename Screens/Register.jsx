@@ -114,22 +114,22 @@ export default function Register({ navigation }) {
             </View>
           </TouchableOpacity>
 
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          {/* <View style={{ flexDirection: "row", alignItems: "center" }}>
             <View style={styles.line} />
             <View>
               <Text style={styles.lineText}>Or SignUp With</Text>
             </View>
             <View style={styles.line} />
-          </View>
+          </View> */}
 
-          <View style={styles.bottomButtonsView}>
+          {/* <View style={styles.bottomButtonsView}>
             <TouchableOpacity onPress={onPressFacebook} style={styles.bottomButtons}>
               <Image source={require("./facebook.png")} style={styles.image} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.bottomButtons}>
               <Image source={require("./google.png")} style={styles.image} />
             </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
 
         <View style={styles.bottomView}>

@@ -57,7 +57,7 @@ export default StyleSheet.create({
     borderColor: "#FCFAFF",
     borderRadius: 9,
     opacity: 0.6,
-    width: 340,
+    width: '94%',
     height: 55,
     backgroundColor: "#DFC7FF",
     paddingLeft: 15,
@@ -75,7 +75,7 @@ export default StyleSheet.create({
     padding: 10,
     marginTop: 45,
     marginBottom: 40,
-    width: 340,
+    width: 345,
     height: 55,
     borderRadius: 8,
     // flex: .2
@@ -97,7 +97,7 @@ export default StyleSheet.create({
   },
 
   lineText: {
-    width: 120,
+    width: 130,
     textAlign: "center",
     color: "white",
     fontSize: 18,
@@ -116,7 +116,7 @@ export default StyleSheet.create({
     borderRadius: 8,
     backgroundColor: "white",
     marginHorizontal: 12,
-    marginTop: 5,
+    marginTop: 8,
     alignItems: "center",
     justifyContent: "center",
   },
