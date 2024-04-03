@@ -10,6 +10,7 @@ export default function AdminHome({ navigation, route }) {
         <View>
             <Text>You are admin</Text>
             <Text>Your email is: {value}</Text>
+        
         </View>
     );
 

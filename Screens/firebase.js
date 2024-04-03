@@ -4,19 +4,13 @@ import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
 
-    // apiKey: "AIzaSyAdaZ4lXurV3zGRYn8AB9PEEarwn8ht7_8",
-    // authDomain: "csg1-d8421.firebaseapp.com",
-    // projectId: "csg1-d8421",
-    // storageBucket: "csg1-d8421.appspot.com",
-    // messagingSenderId: "881558113515",
-    // appId: "1:881558113515:web:4e65deb9bb527854a3c2ae",
-    // measurementId: "G-GZV2HS8YKK"
-    apiKey: "AIzaSyDMg0eqrM87CA5qxD3bhGJhDt_xSQWjKvQ",
-    authDomain: "loginregister-82d7c.firebaseapp.com",
-    projectId: "loginregister-82d7c",
-    storageBucket: "loginregister-82d7c.appspot.com",
-    messagingSenderId: "707517882080",
-    appId: "1:707517882080:web:0a97da7b23a691e2c8ba85"
+    apiKey: "AIzaSyCoVh4x9iZPa6dpbb2rWe5VA-VI8blAZck",
+    authDomain: "fir-login-7850e.firebaseapp.com",
+    projectId: "fir-login-7850e",
+    storageBucket: "fir-login-7850e.appspot.com",
+    messagingSenderId: "821043753777",
+    appId: "1:821043753777:web:047a534885a1ca7ff77610",
+    measurementId: "G-R23LVD8XXW"
 };
 
 // Initialize Firebase

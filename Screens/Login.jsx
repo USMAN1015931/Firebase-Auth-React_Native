@@ -19,9 +19,9 @@ import { LinearGradient } from "expo-linear-gradient";
 import styles from "../styles"
 
 
-
+   
 export default function Login({ navigation }) {
-
+ 
 
 
   const [email, setEmail] = useState();
@@ -39,7 +39,7 @@ export default function Login({ navigation }) {
      // Signed in
      console.log("user data,", userCredential.user);
      const user = userCredential.user;
-     if(email.includes('@admin'))
+     if(email.includes('admin@gmail.com'))
      {
        navigation.navigate('AdminHome', {value: email});
      }
@@ -72,8 +72,8 @@ export default function Login({ navigation }) {
       end={{ x: 1, y: 1 }}
     >
       <View style={styles.top}>
-        <Text style={styles.welcome}>Welcome,</Text>
-        <Text style={styles.text}>Glad to see you!</Text>
+        <Text style={styles.welcome}>Welcome</Text>
+        <Text style={styles.text}></Text>
       </View>
 
       <View style={styles.center}>
@@ -97,29 +97,6 @@ export default function Login({ navigation }) {
           </View>
         </TouchableOpacity>
 
-        {/* <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <View style={styles.line} />
-          <View>
-            <Text style={styles.lineText}>Or Login With</Text>
-          </View>
-          <View style={styles.line} />
-        </View> */}
-
-        {/* <View style = {styles.bottomButtonsView}>
-        <TouchableOpacity style = {styles.bottomButtons}>
-        <Image
-        source={require('./facebook.png')} 
-        style={styles.image}
-      />
-        </TouchableOpacity>
-        <TouchableOpacity style = {styles.bottomButtons}>
-        <Image
-        source={require('./google.png')} 
-        style={styles.image}
-      />
-      </TouchableOpacity> */}
-
-      {/* </View> */}
       </View>
 
     

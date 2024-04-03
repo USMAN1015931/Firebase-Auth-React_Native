@@ -89,8 +89,8 @@ export default function Register({ navigation }) {
         end={{ x: 1, y: 1 }}
       >
         <View style={styles.top}>
-          <Text style={styles.welcome}>Register Now,</Text>
-          <Text style={styles.text}>Glad to see you!</Text>
+          <Text style={styles.welcome}>Register Now</Text>
+          
         </View>
 
         <View style={styles.center}>
@@ -114,22 +114,7 @@ export default function Register({ navigation }) {
             </View>
           </TouchableOpacity>
 
-          {/* <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <View style={styles.line} />
-            <View>
-              <Text style={styles.lineText}>Or SignUp With</Text>
-            </View>
-            <View style={styles.line} />
-          </View> */}
-
-          {/* <View style={styles.bottomButtonsView}>
-            <TouchableOpacity onPress={onPressFacebook} style={styles.bottomButtons}>
-              <Image source={require("./facebook.png")} style={styles.image} />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.bottomButtons}>
-              <Image source={require("./google.png")} style={styles.image} />
-            </TouchableOpacity>
-          </View> */}
+         
         </View>
 
         <View style={styles.bottomView}>

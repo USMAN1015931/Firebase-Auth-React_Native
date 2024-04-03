@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import { View, Text, FlatList,TouchableOpacity,onPress, StyleSheet } from "react-native";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Register from "../Screens/Register";
 
 import GETAPICustomHook from "../GetAPICustomHook";
 
@@ -9,46 +10,37 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const GLOBAL = require("./Globals");
 
-// const data = [
-//   {
-//     id: 1,
-//     title: "First Item",
-//   },
-//   {
-//     id: 2,
-//     title: "Second Item",
-//   },
-//   {
-//     id: 3,
-//     title: "Third Item",
-//   },
-//   {
-//     id: 4,
-//     title: "Third Item",
-//   },
-//   {
-//     id: 5,
-//     title: "Third Item",
-//   },
-//   {
-//     id: 6,
-//     title: "Third Item",
-//   },
-//   {
-//     id: 7,
-//     title: "Third Item",
-//   },
-// ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default function UserHome({ navigation }) {
-  // const [mydata, setMydata] = useState();
 
-  // useEffect(() => {
-  //     axios.get('http://api.alquran.cloud/v1/surah').then((response)=>{
-  //       // console.log(response.data.data);
-  //     setMydata(response.data.data);
-  //     })
-  //   }, []);
+
+
+  const onPress = () =>  {
+    navigation.navigate("Login");
+  }
+
+
+ 
+
+
+
+
 
   const [mydata, setMydata] = useState();
 
@@ -66,7 +58,7 @@ export default function UserHome({ navigation }) {
       } else {
         // Data doesn't exist in AsyncStorage, fetch from API
         console.log("Calling API To get data");
-        axios.get('http://api.alquran.cloud/v1/surah').then((response)=>{
+        axios.get('https://dev.iqrakitab.net/api/books').then((response)=>{
                 console.log(response.data.data);
               setMydata(response.data.data);
               })
@@ -93,13 +85,13 @@ export default function UserHome({ navigation }) {
           renderItem={({ item }) => (
             <View style={styles.item}>
               <Text style={styles.title}> {item.englishName} </Text>
-              <Text style={styles.text}> Surah Number = {item.number} </Text>
+              <Text style={styles.text}> ID NUMBER= {item._id} </Text>
               <Text style={styles.text}>
                 {" "}
-                Meaning = "{item.englishNameTranslation}"{" "}
+                DESCRIPTION = "{item.englishNameTranslation}"{" "}
               </Text>
               <Text style={styles.text}>
-                Total Ayahs = {item.numberOfAyahs}{" "}
+               BOOK NAME= {item.title}
               </Text>
             </View>
           )}
@@ -107,8 +99,11 @@ export default function UserHome({ navigation }) {
       </View>
 
       <View style={styles.Bottom}>
-        <Text>Check</Text>
+      <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text>Click</Text>
+      </TouchableOpacity>
       </View>
+      
 
       <StatusBar style="auto" />
     </View>
@@ -134,7 +129,7 @@ const styles = StyleSheet.create({
     // justifyContent: "center",
   },
   title: {
-    fontSize: 20,
+    fontSize: 10,
     color: "black",
     fontWeight: "bold",
   },
@@ -146,13 +141,15 @@ const styles = StyleSheet.create({
 
   list: {
     flex: 1,
-    backgroundColor: "red",
+    backgroundColor: "blue",
     // alignItems: "center",
     // // justifyContent: "center",
   },
 
   Bottom: {
-    flex: 1,
-    backgroundColor: "green",
+    flex: 0.50,
+    //backgroundColor: "green",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
